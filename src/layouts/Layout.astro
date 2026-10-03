@@ -428,22 +428,33 @@ const navItems = [
             const dialog = document.getElementById(
               `project-${btn.dataset.openProject}`,
             );
-            if (dialog instanceof HTMLDialogElement) {
-              if (typeof dialog.showModal === "function") dialog.showModal();
-              else dialog.setAttribute("open", "");
-            }
+            if (!(dialog instanceof HTMLDialogElement)) return;
+            document.documentElement.classList.add("dialog-open");
+            if (typeof dialog.showModal === "function") dialog.showModal();
+            else dialog.setAttribute("open", "");
           });
         });
 
       document
         .querySelectorAll<HTMLDialogElement>("[data-project-dialog]")
         .forEach((dialog) => {
+          const close = () => {
+            if (typeof dialog.close === "function") dialog.close();
+            else dialog.removeAttribute("open");
+            document.documentElement.classList.remove("dialog-open");
+          };
           dialog.addEventListener("click", (event) => {
-            if (event.target === dialog) dialog.close();
+            if (event.target === dialog) close();
           });
           dialog
             .querySelector("[data-close-project]")
-            ?.addEventListener("click", () => dialog.close());
+            ?.addEventListener("click", close);
+          dialog.addEventListener("close", () =>
+            document.documentElement.classList.remove("dialog-open"),
+          );
+          dialog.addEventListener("cancel", () =>
+            document.documentElement.classList.remove("dialog-open"),
+          );
         });
 
       // Terminal : easter egg interactif (tape une commande puis Entrée)

@@ -1249,8 +1249,11 @@ ol {
 }
 
 /* --- Fenêtre de détail projet --- */
+html.dialog-open {
+  overflow: hidden;
+}
+
 .project-dialog {
-  position: relative;
   width: min(1040px, 92vw);
   max-width: 1040px;
   max-height: 88vh;
