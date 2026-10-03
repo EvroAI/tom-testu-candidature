@@ -189,10 +189,10 @@ export const content = {
           tags: ["HTML", "CSS", "W3C"],
         },
         {
-          title: "Application iOS de suivi sportif",
-          meta: "Personnel · 2026",
+          title: "Aven",
+          meta: "Personnel · 2026 · iOS",
           description:
-            "Application Swift/SwiftUI pour suivre ses séances de musculation : expérimentation de fonctionnalités natives et distribution sur l'App Store.",
+            "Application iOS de suivi sportif (SwiftUI) : programmes, séries et charges, records, nutrition et statistiques. Conçue, développée et distribuée sur l'App Store.",
           tags: ["Swift", "SwiftUI", "App Store"],
         },
         {
@@ -219,6 +219,8 @@ export const content = {
       ],
       githubCta: "Voir tous mes dépôts sur GitHub",
       portfolioCta: "Visiter mon portfolio",
+      openLabel: "Voir le détail du projet",
+      closeLabel: "Fermer",
     },
     journey: {
       title: "Parcours",
@@ -558,10 +560,10 @@ export const content = {
           tags: ["HTML", "CSS", "W3C"],
         },
         {
-          title: "iOS fitness tracking app",
-          meta: "Personal · 2026",
+          title: "Aven",
+          meta: "Personal · 2026 · iOS",
           description:
-            "A Swift/SwiftUI app to track my workouts: experimenting with native features and distributing on the App Store.",
+            "iOS fitness tracking app (SwiftUI): programs, sets and loads, records, nutrition and stats. Designed, built and shipped to the App Store.",
           tags: ["Swift", "SwiftUI", "App Store"],
         },
         {
@@ -588,6 +590,8 @@ export const content = {
       ],
       githubCta: "See all my repositories on GitHub",
       portfolioCta: "Visit my portfolio",
+      openLabel: "View project details",
+      closeLabel: "Close",
     },
     journey: {
       title: "Journey",
