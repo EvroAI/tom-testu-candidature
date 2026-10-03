@@ -37,9 +37,9 @@ const logoDev = (domain: string) =>
 const skillIcons: Record<string, string> = {
   Java: logoDev("java.com"),
   Kotlin: logoDev("kotlinlang.org"),
-  C: "https://cdn.simpleicons.org/c/00599C",
+  C: "/logos/c.svg",
   Swift: logoDev("swift.org"),
-  JavaScript: logoDev("javascript.com"),
+  JavaScript: "/logos/javascript.svg",
   PHP: logoDev("php.net"),
   "HTML / CSS": logoDev("w3.org"),
   React: logoDev("react.dev"),
@@ -296,24 +296,58 @@ const skillIcons: Record<string, string> = {
         {
           c.projects.items.map((project, i) => (
             <article class="folder reveal" data-delay={String(i % 2)}>
-              <span class="folder-tab" aria-hidden="true">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <div class="folder-panel">
-                <p class="folder-meta" data-i18n={`projects.items.${i}.meta`}>
-                  {project.meta}
-                </p>
-                <h3 class="folder-title" data-i18n={`projects.items.${i}.title`}>
-                  {project.title}
-                </h3>
-                <p class="folder-desc" data-i18n={`projects.items.${i}.description`}>
-                  {project.description}
-                </p>
-                <ul class="folder-tags">
-                  {project.tags.map((tag, j) => (
-                    <li data-i18n={`projects.items.${i}.tags.${j}`}>{tag}</li>
-                  ))}
-                </ul>
+              <div class="folder-papers" aria-hidden="true">
+                <span class="folder-paper folder-paper--a"></span>
+                <span class="folder-paper folder-paper--b"></span>
+              </div>
+
+              <div class="folder-front">
+                <svg
+                  class="folder-front-shape"
+                  viewBox="0 0 600 300"
+                  preserveAspectRatio="none"
+                  aria-hidden="true"
+                >
+                  <path d="M0 300 L0 20 Q0 0 20 0 L180 0 A90 40 0 0 0 360 0 L580 0 Q600 0 600 20 L600 300 Z" />
+                </svg>
+
+                <div class="folder-front-content">
+                  <h3 class="folder-title" data-i18n={`projects.items.${i}.title`}>
+                    {project.title}
+                  </h3>
+                  <p class="folder-meta" data-i18n={`projects.items.${i}.meta`}>
+                    {project.meta}
+                  </p>
+                  <p class="folder-desc" data-i18n={`projects.items.${i}.description`}>
+                    {project.description}
+                  </p>
+                  <ul class="folder-tags">
+                    {project.tags.map((tag, j) => (
+                      <li data-i18n={`projects.items.${i}.tags.${j}`}>{tag}</li>
+                    ))}
+                  </ul>
+
+                  <div class="folder-footer">
+                    <svg
+                      width="17"
+                      height="17"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.7"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M3 7a2 2 0 0 1 2-2h3.6l1.8 2H19a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+                      ></path>
+                    </svg>
+                    <span class="folder-index" aria-hidden="true">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                  </div>
+                </div>
               </div>
             </article>
           ))
