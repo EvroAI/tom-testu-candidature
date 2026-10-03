@@ -1,0 +1,20 @@
+{
+  "name": "tom-testu-candidature-a2o",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site de candidature de Tom Testu pour le stage web, IA & gouvernance numérique chez Alpha to Omega.",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^5.13.0"
+  },
+  "devDependencies": {
+    "wrangler": "^4.147.0"
+  }
+}
