@@ -971,6 +971,7 @@ ol {
 }
 
 .skill-ico {
+  position: relative;
   display: grid;
   place-items: center;
   flex: none;
@@ -984,9 +985,31 @@ ol {
 }
 
 .skill-ico img {
+  position: relative;
+  z-index: 1;
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+.skill-ico-fallback {
+  position: absolute;
+  inset: 0;
+  display: none;
+  place-items: center;
+  font-family: var(--font-sans);
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+.skill-ico.has-fallback .skill-ico-fallback {
+  display: grid;
+}
+
+.skill-ico.has-fallback img {
+  display: none;
 }
 
 /* En cours d'apprentissage */

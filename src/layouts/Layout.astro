@@ -409,6 +409,17 @@ const navItems = [
         card.addEventListener("pointercancel", release);
       });
 
+      // Icônes de compétences : repli (initiale) si le logo ne charge pas
+      document
+        .querySelectorAll<HTMLImageElement>(".skill-ico img")
+        .forEach((img) => {
+          const chip = img.closest<HTMLElement>(".skill-ico");
+          if (!chip) return;
+          const fallback = () => chip.classList.add("has-fallback");
+          if (img.complete && img.naturalWidth === 0) fallback();
+          img.addEventListener("error", fallback);
+        });
+
       // Terminal : easter egg interactif (tape une commande puis Entrée)
       const termForm = document.querySelector<HTMLFormElement>("[data-terminal-form]");
       const termInput = document.querySelector<HTMLInputElement>("[data-terminal-input]");

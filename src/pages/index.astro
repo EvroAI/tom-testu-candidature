@@ -30,26 +30,30 @@ const toolLogos = [
 ];
 
 // Icônes des compétences (clé = libellé FR, pour rester indépendant de la langue).
+// URLs complètes : logo.dev pour la plupart, simple-icons pour le langage C.
+const logoDev = (domain: string) =>
+  `https://img.logo.dev/${domain}?token=${SITE.logoDevToken}&size=64&format=png`;
+
 const skillIcons: Record<string, string> = {
-  Java: "java.com",
-  Kotlin: "kotlinlang.org",
-  Swift: "swift.org",
-  JavaScript: "javascript.com",
-  PHP: "php.net",
-  "HTML / CSS": "w3.org",
-  React: "react.dev",
-  SwiftUI: "apple.com",
-  Git: "git-scm.com",
-  GitHub: "github.com",
-  "Linux (shell)": "linux.org",
-  Cloudflare: "cloudflare.com",
-  Vercel: "vercel.com",
-  Supabase: "supabase.com",
-  Codex: "openai.com",
-  "Claude Code": "anthropic.com",
-  OpenCode: "opencode.ai",
-  MCP: "modelcontextprotocol.io",
-  Hermès: "nousresearch.com",
+  Java: logoDev("java.com"),
+  Kotlin: logoDev("kotlinlang.org"),
+  C: "https://cdn.simpleicons.org/c/00599C",
+  Swift: logoDev("swift.org"),
+  JavaScript: logoDev("javascript.com"),
+  PHP: logoDev("php.net"),
+  "HTML / CSS": logoDev("w3.org"),
+  React: logoDev("react.dev"),
+  Git: logoDev("git-scm.com"),
+  GitHub: logoDev("github.com"),
+  "Linux (shell)": logoDev("linux.org"),
+  Cloudflare: logoDev("cloudflare.com"),
+  Vercel: logoDev("vercel.com"),
+  Supabase: logoDev("supabase.com"),
+  Codex: logoDev("openai.com"),
+  "Claude Code": logoDev("anthropic.com"),
+  OpenCode: logoDev("opencode.ai"),
+  MCP: logoDev("modelcontextprotocol.io"),
+  Hermès: logoDev("nousresearch.com"),
 };
 ---
 
@@ -235,13 +239,14 @@ const skillIcons: Record<string, string> = {
                   <li>
                     {skillIcons[item] && (
                       <span class="skill-ico" aria-hidden="true">
+                        <span class="skill-ico-fallback">{item.charAt(0)}</span>
                         <img
-                          src={`https://img.logo.dev/${skillIcons[item]}?token=${SITE.logoDevToken}&size=64&format=png`}
+                          src={skillIcons[item]}
                           alt=""
                           width="64"
                           height="64"
-                          loading="lazy"
                           decoding="async"
+                          referrerpolicy="no-referrer"
                         />
                       </span>
                     )}
@@ -564,6 +569,7 @@ const skillIcons: Record<string, string> = {
                     height="128"
                     loading="lazy"
                     decoding="async"
+                    referrerpolicy="no-referrer"
                   />
                 </span>
               </span>

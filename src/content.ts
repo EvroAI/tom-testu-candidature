@@ -153,7 +153,7 @@ export const content = {
         },
         {
           title: "IA & vibecoding",
-          items: ["Codex", "Claude Code", "OpenCode", "MCP", "Skills", "RAG", "Hermès", "Vibecoding"],
+          items: ["Codex", "Claude Code", "OpenCode", "MCP", "Skills", "RAG", "Hermès"],
         },
       ],
       learningTitle: "En cours d'apprentissage",
@@ -522,7 +522,7 @@ export const content = {
         },
         {
           title: "AI & vibecoding",
-          items: ["Codex", "Claude Code", "OpenCode", "MCP", "Skills", "RAG", "Hermes", "Vibecoding"],
+          items: ["Codex", "Claude Code", "OpenCode", "MCP", "Skills", "RAG", "Hermes"],
         },
       ],
       learningTitle: "Currently learning",
