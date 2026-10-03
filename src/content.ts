@@ -221,6 +221,8 @@ export const content = {
       portfolioCta: "Visiter mon portfolio",
       openLabel: "Voir le détail du projet",
       closeLabel: "Fermer",
+      repoCta: "Voir le code sur GitHub",
+      profileCta: "Voir mon GitHub",
     },
     journey: {
       title: "Parcours",
@@ -592,6 +594,8 @@ export const content = {
       portfolioCta: "Visit my portfolio",
       openLabel: "View project details",
       closeLabel: "Close",
+      repoCta: "See the code on GitHub",
+      profileCta: "See my GitHub",
     },
     journey: {
       title: "Journey",
