@@ -313,7 +313,7 @@ const projectImages: Record<number, { src: ImageMetadata; alt: string }[]> = {
         {
           c.projects.items.map((project, i) => (
             <article class="folder reveal" data-delay={String(i % 2)}>
-              <div class="folder-papers" aria-hidden="true">
+              <div class="folder-band" aria-hidden="true">
                 <span class="folder-paper folder-paper--a"></span>
                 <span class="folder-paper folder-paper--b"></span>
               </div>
@@ -325,7 +325,7 @@ const projectImages: Record<number, { src: ImageMetadata; alt: string }[]> = {
                   preserveAspectRatio="none"
                   aria-hidden="true"
                 >
-                  <path d="M0 300 L0 20 Q0 0 20 0 L180 0 A90 40 0 0 0 360 0 L580 0 Q600 0 600 20 L600 300 Z" />
+                  <path d="M0 300 L0 20 Q0 0 20 0 L200 0 A70 30 0 0 0 340 0 L580 0 Q600 0 600 20 L600 300 Z" />
                 </svg>
 
                 <div class="folder-front-content">
